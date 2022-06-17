@@ -1,0 +1,86 @@
+@import 'src/assets/styles/global.scss';
+@import "src/assets/styles/mixin";
+@import "src/assets/styles/variable";
+
+.root {
+    background-color: #ebebeb;
+    margin-left: 240px;
+    overflow: hidden;
+    padding: 0 15px 65px 15px;
+    min-height: 80vh;
+    color: #6c757d;
+    padding-top: 70px;
+    a {
+        color: #6c757d;
+
+    }
+}
+
+.page-title-box {
+    background-color: #fff;
+    margin: 0 -27px 30px;
+    padding: 0 27px;
+    -webkit-box-shadow: 0 1px 1px rgb(50 58 70 / 10%);
+}
+
+.page-title-right {
+    float: right;
+    margin-top: 1rem;
+}
+
+.page-title {
+    font-size: 1.1rem;
+    margin: 0;
+    line-height: 60px;
+    color: #323a46;
+    text-transform: uppercase;
+}
+
+.text {
+    color: #6c757d;
+    font-weight: normal;
+    text-align: left;
+    white-space: nowrap;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+.table{
+    background-color: #fff;
+}
+.card-body {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.5rem;
+}
+
+.table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.breadcrumb-item {
+    padding-left: 0.5rem;
+
+    &:active {
+        color: #adb5bd;
+    }
+}
+
+.custom-select {
+    margin-left: 0.375rem !important;
+    margin-right: 0.375rem !important;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    vertical-align: middle;
+    height: calc(1.5em + 0.5rem + 2px);
+    padding: 0.25rem 0.5rem;
+    font-size: .875rem;
+}
+.search{
+    text-align: right;
+}
