@@ -7,8 +7,7 @@ import { MdArrowForwardIos } from 'react-icons/md'
 import Table from 'antd/lib/table/Table'
 import { Button, Modal } from 'antd'
 import { MdDelete } from "react-icons/md"
-import { deleteUser } from '../../../slice/userSlice.ts';
-import userSlice from '../../../slice/userSlice';
+import axiosClient from '../../../utilities/api';
 export interface UserProps { }
 
 export interface UserDataType {
@@ -26,17 +25,26 @@ const API_DEL_USER = `http://localhost:8080/api/auth/deleteuser`;
 
 
 const User: React.FC<UserProps> = (props) => {
-  const [user, setUser] = useState<UserDataType>();
+  const [user, setUser] = useState<UserDataType[]>();
+  const [a, setA] = useState(false);
+
+  const handleDeleteUser = async (record:UserDataType) =>{
+    console.log(record)
+    const response = await axiosClient.delete(`/api/auth/deleteuser/${record.id}`)
+    console.log(response)
+    if(response) setA(!a);
+
+  }
 
   useEffect(() => {
     fetch(API_USER)
       .then((user) => user.json())
-      .then((user: UserDataType) => {
+      .then((user: UserDataType[]) => {
         setUser(user);
         console.log("user", user);
-        console.log(user[0].roles[0].name);
+        // console.log(user[0].roles[0].name);
       });
-  }, [])
+  }, [a])
   const column = [
     {
       title: 'User ID',
@@ -71,7 +79,7 @@ const User: React.FC<UserProps> = (props) => {
       key: 'create',
       render: (text: string, record: UserDataType) => (
         <Button danger 
-        // onClick={() => handleDeleteUser(record.id)}
+        onClick={() => handleDeleteUser(record)}
         >
           <MdDelete className="subject" />
         </Button>
@@ -102,6 +110,7 @@ const User: React.FC<UserProps> = (props) => {
             dataSource={user}
           />
         </div>
+        {a}
       </div>
     </div>
   )

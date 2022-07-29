@@ -1,7 +1,12 @@
 @import 'src/assets/styles/global.scss';
-@import "src/assets/styles/mixin" ;
-@import "src/assets/styles/variable" ;
+@import "src/assets/styles/mixin";
+@import "src/assets/styles/variable";
 
 .root {
     padding-top: 70px;
+
+}
+
+a {
+    text-decoration: none;
 }

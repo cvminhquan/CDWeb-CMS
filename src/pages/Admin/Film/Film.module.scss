@@ -4,7 +4,7 @@
 
 .root {
     background-color: #ebebeb;
-    margin-left: 240px;
+    margin-left: 8.75rem;
     overflow: hidden;
     padding: 0 15px 65px 15px;
     min-height: 80vh;
@@ -12,13 +12,13 @@
     padding-top: 70px;
     a {
         color: #6c757d;
-
+        text-decoration: none;
     }
 }
 
 .page-title-box {
     background-color: #fff;
-    margin: 0 -27px 30px;
+    margin: 0 -27px 0px;
     padding: 0 27px;
     -webkit-box-shadow: 0 1px 1px rgb(50 58 70 / 10%);
 }
@@ -83,4 +83,18 @@
 }
 .search{
     text-align: right;
+}
+.button-action{
+    margin: 0.25rem;
+}
+.btn-success{
+    border-color: rgb(66, 156, 66);
+    float: right;
+    // margin: 0.5rem 0;
+}
+.table-datagrid{
+    height: 100%;
+    width: 100%;
+    background-color:#fff;
+    font-size: 1rem;
 }

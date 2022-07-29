@@ -7,10 +7,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import 'bootstrap/dist/css/bootstrap.css';
 
 import { useState } from "react";
-import HeaderAdmin from "./pages/Admin/HeaderAdmin/HeaderAdmin.tsx";
-import User from "./pages/Admin/User/User.tsx";
-import SideBar from "./pages/Admin/SideBar/SideBar.tsx";
-import Film from "./pages/Admin/Film/Film.tsx";
+import HeaderAdmin from "./pages/Admin/HeaderAdmin/HeaderAdmin";
+import User from "./pages/Admin/User/User";
+import SideBar from "./pages/Admin/SideBar/SideBar";
+import Film from "./pages/Admin/Film/Film";
 
 
 function App() {
